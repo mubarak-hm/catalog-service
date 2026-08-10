@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: catalog-service
+  profiles:
+    active: testdata
+
+polar:
+  greeting: Welcome to the local book catalog!
+

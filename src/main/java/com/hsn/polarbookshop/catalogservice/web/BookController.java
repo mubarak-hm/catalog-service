@@ -33,7 +33,6 @@ public class BookController {
         return bookService.addBookToCatalog(book);
     }
 
-
     @DeleteMapping("{isbn}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@PathVariable String isbn) {
