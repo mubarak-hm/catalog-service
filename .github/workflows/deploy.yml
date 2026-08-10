@@ -34,9 +34,7 @@ jobs:
           fail-build: false
           severity-cutoff: high
 
-      # grype hard-fails when its vulnerability DB is stale, leaving an empty
-      # results.sarif that upload-sarif rejects as invalid JSON. Only upload a
-      # report that actually parsed.
+
       - name: Validate vulnerability report
         id: sarif
         if: always() && steps.scan.outcome != 'skipped'
