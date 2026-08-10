@@ -1,0 +1,41 @@
+### Maven ###
+target/
+!**/src/main/**/target/
+!**/src/test/**/target/
+pom.xml.versionsBackup
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+
+# The Maven wrapper itself is committed on purpose (mvnw, mvnw.cmd,
+# .mvn/wrapper/maven-wrapper.properties) so CI and the IDE build with the
+# same pinned Maven version. Only its downloaded distributions are ignored.
+.mvn/wrapper/maven-wrapper.jar
+.mvn/.develocity/
+
+### IntelliJ IDEA ###
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+### Eclipse / STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### VS Code ###
+.vscode/
+
+### Logs ###
+*.log
+logs/
+
+### OS ###
+.DS_Store
+Thumbs.db
