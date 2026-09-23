@@ -1,6 +1,4 @@
 package com.hsn.polarbookshop.catalogservice.web;
-
-
 import com.hsn.polarbookshop.catalogservice.config.PolarProperties;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,11 +11,9 @@ public class HomeController {
         this.polarProperties = polarProperties;
     }
 
-
     @GetMapping("/")
     public  String getGreeting () {
         return polarProperties.getGreeting();
-
     }
 }
 

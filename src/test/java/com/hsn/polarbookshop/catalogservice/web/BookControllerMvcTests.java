@@ -3,7 +3,7 @@ import com.hsn.polarbookshop.catalogservice.domain.BookNotFoundException;
 import com.hsn.polarbookshop.catalogservice.domain.BookService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
 import static org.mockito.BDDMockito.given;
 // Add this to resolve .willThrow()
 import static org.mockito.BDDMockito.willThrow;
@@ -30,7 +30,7 @@ class BookControllerMvcTests {
          given(bookService.viewBookDetails(isbn))
                  .willThrow(BookNotFoundException.class);
          mockMvc
-                 .perform(get("/books"+isbn))
+                 .perform(get("/books/"+isbn))
                  .andExpect(status().isNotFound());
 
 
